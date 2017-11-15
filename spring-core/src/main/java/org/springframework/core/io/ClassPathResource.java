@@ -191,7 +191,7 @@ public class ClassPathResource extends AbstractFileResolvingResource {
 	@Override
 	public URL getURL() throws IOException {
 		URL url = resolveURL();
-		if (url == null) {
+			if (url == null) {
 			throw new FileNotFoundException(getDescription() + " cannot be resolved to URL because it does not exist");
 		}
 		return url;

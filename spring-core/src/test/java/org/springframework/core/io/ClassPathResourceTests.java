@@ -46,6 +46,14 @@ public class ClassPathResourceTests {
 
 	private static final Pattern DESCRIPTION_PATTERN = Pattern.compile("^class path resource \\[(.+?)\\]$");
 
+	@Test
+	public void realPathFromClassPathrResource(){
+		ClassPathResource cpr = new ClassPathResource(FQ_RESOURCE_PATH);
+
+		System.out.println("real path："+cpr.getPath());
+		 System.out.println(cpr.exists());
+	}
+
 
 	@Test
 	public void stringConstructorRaisesExceptionWithFullyQualifiedPath() {
